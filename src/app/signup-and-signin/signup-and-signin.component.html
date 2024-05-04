@@ -2,16 +2,16 @@
   <ion-img [src]="isSignin ? signinImg : signupImg" />
   <p class="title-style">{{ isSignin ? "SignIn" : "SignUp" }}</p>
   <form>
-    <ion-input fill="outline" mode="md" shape="round"
+    <ion-input fill="outline" mode="md" shape="round" placeholder="Email"
       ><ion-icon slot="start" src="../../assets/icon/mail.svg"></ion-icon
     ></ion-input>
-    <ion-input fill="outline" mode="md" shape="round"
+    <ion-input fill="outline" mode="md" shape="round" placeholder="Password"
       ><ion-icon slot="start" src="../../assets/icon/key.svg"></ion-icon
     ></ion-input>
     <ion-button>{{ isSignin ? "Signin" : "Continue" }}</ion-button>
   </form>
   <div>
-    <p>don't have an account?</p>
+    <p>&nbsp;&nbsp;don't have an account?&nbsp;&nbsp;</p>
     <ion-button (click)="onSignup()">{{
       isSignin ? "Go SignUp" : "Go SignIn"
     }}</ion-button>
