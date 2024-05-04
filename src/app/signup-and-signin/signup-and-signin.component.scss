@@ -1,0 +1,56 @@
+ion-content::part(scroll) {
+  padding-top: var(--ion-safe-area-top, 0);
+}
+
+ion-content{
+  ion-img{
+    margin: auto;
+    display: block;
+    width: 75%;
+  }
+  .title-style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 4px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  form{
+    width: 90%;
+    margin: auto;
+    ion-input:first-child{
+      margin-bottom: 20px;
+    }
+    ion-input{
+      --border-radius: 15px;
+    }
+    ion-button{
+      margin-top: 50px;
+      width: 100%;
+      --background:#463A8E;
+      --background-activated: #372c72;
+      letter-spacing: 2px;
+    }
+  }
+  div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    ion-button{
+      width: 90%;
+      letter-spacing: 2px;
+      --background:#000000;
+      --background-activated: #000000;
+    }
+    p::before{
+      content: "-----------------";
+      letter-spacing: -.2rem;
+    }
+    p::after{
+      content: "-----------------";
+      letter-spacing: -.2rem;
+    }
+  }
+}
