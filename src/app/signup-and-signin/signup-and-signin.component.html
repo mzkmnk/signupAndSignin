@@ -6,8 +6,12 @@
       ><ion-icon slot="start" src="../../assets/icon/mail.svg"></ion-icon
     ></ion-input>
     <ion-input fill="outline" mode="md" shape="round" placeholder="Password"
-      ><ion-icon slot="start" src="../../assets/icon/key.svg"></ion-icon
-    ></ion-input>
+      ><ion-icon slot="start" src="../../assets/icon/key.svg"></ion-icon>
+      <ion-input-password-toggle
+        slot="end"
+        color="dark"
+      ></ion-input-password-toggle>
+    </ion-input>
     <ion-button>{{ isSignin ? "Signin" : "Continue" }}</ion-button>
   </form>
   <div>

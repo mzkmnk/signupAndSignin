@@ -1,13 +1,12 @@
-import { Component, ViewChild, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   IonContent,
   IonInput,
   IonButton,
   IonImg,
   IonIcon,
+  IonInputPasswordToggle,
 } from '@ionic/angular/standalone';
-import type { Animation } from '@ionic/angular';
-import { AnimationController } from '@ionic/angular';
 
 export interface IUser {
   username?: string;
@@ -20,8 +19,14 @@ export interface IUser {
   templateUrl: './signup-and-signin.component.html',
   styleUrls: ['./signup-and-signin.component.scss'],
   standalone: true,
-  providers: [AnimationController],
-  imports: [IonIcon, IonImg, IonButton, IonInput, IonContent],
+  imports: [
+    IonIcon,
+    IonImg,
+    IonButton,
+    IonInput,
+    IonContent,
+    IonInputPasswordToggle,
+  ],
 })
 export class SignupAndSigninComponent {
   isSignin = true;
@@ -32,11 +37,7 @@ export class SignupAndSigninComponent {
     email: '',
     password: '',
   };
-  private animationCtrl = inject(AnimationController);
-  private animation: Animation | null = null;
-  constructor() {
-    // this.animation = this.animationCtrl.create().addElement;
-  }
+  constructor() {}
 
   onSignup() {
     this.isSignin = !this.isSignin;
