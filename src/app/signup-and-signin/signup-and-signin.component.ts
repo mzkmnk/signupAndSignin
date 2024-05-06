@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import {
   IonContent,
   IonInput,
@@ -26,9 +27,14 @@ export interface IUser {
     IonInput,
     IonContent,
     IonInputPasswordToggle,
+    FormsModule,
   ],
 })
 export class SignupAndSigninComponent {
+  @Input() submit: (user: IUser) => Promise<void> = async (user: IUser) => {
+    console.log(user);
+    console.log('submit');
+  };
   isSignin = true;
   signinImg = '../../assets/icon/signin.png';
   signupImg = '../../assets/icon/signup.png';
@@ -46,5 +52,9 @@ export class SignupAndSigninComponent {
       email: '',
       password: '',
     };
+  }
+
+  async onClickSubmit() {
+    await this.submit(this.user);
   }
 }

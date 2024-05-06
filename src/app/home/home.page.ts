@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { IonContent } from "@ionic/angular/standalone";
-import { SignupAndSigninComponent } from "../signup-and-signin/signup-and-signin.component";
+import { IUser, SignupAndSigninComponent } from "../signup-and-signin/signup-and-signin.component";
 
 @Component({
   selector: "app-home",
@@ -11,4 +11,8 @@ import { SignupAndSigninComponent } from "../signup-and-signin/signup-and-signin
 })
 export class HomePage {
   constructor() {}
+
+  async submit(user:IUser){
+    console.log(user);
+  }
 }
