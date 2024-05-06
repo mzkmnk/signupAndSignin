@@ -36,8 +36,8 @@ export class SignupAndSigninComponent {
     console.log('submit');
   };
   isSignin = true;
-  signinImg = '../../assets/icon/signin.png';
-  signupImg = '../../assets/icon/signup.png';
+  signinImg = 'assets/mzkmnk/signin.png';
+  signupImg = 'assets/mzkmnk/signup.png';
   user: IUser = {
     username: '',
     email: '',

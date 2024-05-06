@@ -1,0 +1,37 @@
+<ion-content>
+  <ion-img [src]="isSignin ? signinImg : signupImg" />
+  <p class="title-style">{{ isSignin ? "SignIn" : "SignUp" }}</p>
+  <form>
+    <ion-input
+      fill="outline"
+      mode="md"
+      shape="round"
+      placeholder="Email"
+      [(ngModel)]="user.email"
+      name="email"
+      ><ion-icon slot="start" src="assets/mzkmnk/mail.svg"></ion-icon
+    ></ion-input>
+    <ion-input
+      fill="outline"
+      mode="md"
+      shape="round"
+      placeholder="Password"
+      [(ngModel)]="user.password"
+      name="password"
+      ><ion-icon slot="start" src="assets/mzkmnk/key.svg"></ion-icon>
+      <ion-input-password-toggle
+        slot="end"
+        color="dark"
+      ></ion-input-password-toggle>
+    </ion-input>
+    <ion-button (click)="onClickSubmit()">{{
+      isSignin ? "Signin" : "Continue"
+    }}</ion-button>
+  </form>
+  <div>
+    <p>&nbsp;&nbsp;don't have an account?&nbsp;&nbsp;</p>
+    <ion-button (click)="onSignup()">{{
+      isSignin ? "Go SignUp" : "Go SignIn"
+    }}</ion-button>
+  </div>
+</ion-content>

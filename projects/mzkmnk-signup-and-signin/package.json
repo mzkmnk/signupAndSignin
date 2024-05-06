@@ -1,0 +1,30 @@
+{
+  "name": "mzkmnk-signup-and-signin",
+  "version": "0.0.7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzkmnk/signupAndSignin/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzkmnk/signupAndSignin"
+  },
+  "homepage": "https://github.com/mzkmnk/signupAndSignin",
+  "keywords": [
+    "ionic",
+    "angular",
+    "signin",
+    "signup"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^17.0.2",
+    "@angular/core": "^17.0.2",
+    "@ionic/angular": "^8.0.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@ionic/angular": "^7.7.3"
+  },
+  "author": "mzkmnk",
+  "description": "ionic signin and signup component"
+}
